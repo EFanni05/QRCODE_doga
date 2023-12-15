@@ -10,6 +10,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ListviewAdatok"/>
+        android:id="@+id/ListviewAdatok"
+        tools:listitem="@layout/diak_list_items"/>
 
 </LinearLayout>
