@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -19,6 +20,9 @@ import java.util.List;
 public class ListaAdatok extends AppCompatActivity {
 
     private ListView listviwe;
+    private TextView jegytext;
+    private TextView nevtext;
+    private TextView szerkesztext;
     private String api;
     private List<Diak> Diak = new ArrayList<>();
     @Override
@@ -34,6 +38,9 @@ public class ListaAdatok extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         api = bundle.getString("api");
         listviwe = findViewById(R.id.ListviewAdatok);
+        jegytext = findViewById(R.id.tetxjegy);
+        nevtext = findViewById(R.id.textnev);
+        szerkesztext = findViewById(R.id.szerkesztes);
     }
 
     private class RequestTask extends AsyncTask<Void, Void, Response> {
